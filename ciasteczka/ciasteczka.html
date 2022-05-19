@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies</title>
+</head>
+<body onload="zamknij()">
+    <div id="akceptuje">Naciśnij guzik żeby zaakceptować
+        <button  onclick="tak()" id="button">Naciśnij</button>
+        </div>
+    
+        <script>
+            function tak(){ 
+                let button = document.getElementById("akceptuje") 
+                button.style.display = "none";
+                document.cookie = "cookieAccept: true"
+                 window.alert("Zatwierdziłeś Ciasteczka!")
+    
+                }
+            function znikaj(){
+                if(document.cookie == "cookieAccept: true"){
+                    document.getElementById("akceptuje").style.display = "none";
+                }
+                else
+                    document.getElementById("akceptuje").style.visibility = "block";
+    
+    
+            }
+        </script>
+    
+</body>
+</html>
